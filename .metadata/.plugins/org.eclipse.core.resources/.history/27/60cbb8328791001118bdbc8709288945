@@ -9,8 +9,6 @@
 #include "health.h"
 #include <stdint.h>
 
-/*Include watch dog*/
-
 #define GPIOGCLK_EN 	(1U << 6)
 #define GPIO13_RESET	~(3U << 26)
 #define GPIO13_SET		(1U << 26)
