@@ -1,0 +1,17 @@
+07:01:49 **** Incremental Build of configuration Debug for project ci_cd_demo ****
+make -j11 all 
+arm-none-eabi-gcc "../Src/health.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"/Users/user/Developer/embedded/stm32/CI_CD/ci_cd_demo/chip_headers/CMSIS/Include" -I"/Users/user/Developer/embedded/stm32/CI_CD/ci_cd_demo/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/health.d" -MT"Src/health.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/health.o"
+arm-none-eabi-gcc -o "ci_cd_demo.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/user/Developer/embedded/stm32/CI_CD/ci_cd_demo/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ci_cd_demo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ci_cd_demo.elf
+ 
+arm-none-eabi-size  ci_cd_demo.elf 
+arm-none-eabi-objdump -h -S ci_cd_demo.elf  > "ci_cd_demo.list"
+   text	   data	    bss	    dec	    hex	filename
+    768	      0	   1568	   2336	    920	ci_cd_demo.elf
+Finished building: default.size.stdout
+ 
+Finished building: ci_cd_demo.list
+ 
+
+07:01:49 Build Finished. 0 errors, 0 warnings. (took 502ms)
+

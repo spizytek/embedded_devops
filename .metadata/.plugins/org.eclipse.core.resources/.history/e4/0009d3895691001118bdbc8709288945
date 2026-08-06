@@ -1,0 +1,30 @@
+
+#include "stm32f4xx.h"
+#include <stdint.h>
+
+#define GPIOGCLK_EN 	(1 << 6)
+#define GPIO13_RESET	~(3 << 26)
+#define GPIO13_SET		(1 << 26)
+
+#define GPIO13_LEDTOGGLE (1 << 13)
+
+int main(void)
+{
+
+	/*Enable RCC clock for GPIO access*/
+	RCC->AHB1ENR |= GPIOGCLK_EN;
+
+	/*Configure GPIOx as Output using the GPIO moder register: 2bit fields = 0 | 1 bits*/
+	GPIOG->MODER &= GPIO13_RESET; //Clear existing bits to 0
+	GPIOG->MODER |= GPIO13_SET;
+
+    /* Loop forever */
+	while(1)
+	{
+		/*Toggle pin 13 in the ODR register to blink the attched LED*/
+		GPIOG->ODR ^= GPIO13_LEDTOGGLE;
+
+		/*Acts a delay*/
+		for(int i =0; i < 1000000; i++){}
+	}
+}

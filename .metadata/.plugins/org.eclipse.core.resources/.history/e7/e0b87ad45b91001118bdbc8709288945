@@ -1,0 +1,26 @@
+/*
+ * health.c
+ *
+ *  Created on: Aug 6, 2026
+ *      Author: Agha Ikechukwu Kingsley
+ */
+
+#include <stdio.h>
+#include "version.h"
+#include "health.h"
+
+
+/**
+ * @brief Emits the firmware identity line over the debug UART
+ *
+ * The output is a single CSV-like line designed for both humans and later automation:
+ * HEALTH, project=...,version=...,build_id=...,git_sha=...,config=...,timestamp=...
+ */
+
+void health_emit_identity_line(void){
+
+	printf("HEALTH, project=%s,version=%s,build_id=%s,git_sha=%s,config=%s,timestamp=%s"
+
+		);
+
+}

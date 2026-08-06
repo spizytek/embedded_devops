@@ -1,0 +1,23 @@
+
+#include "stm32f4xx.h"
+#include <stdint.h>
+
+#define GPIOGCLK_EN 	(1 << 6)
+#define GPIO13_RESET	~(3 << 26)
+
+int main(void)
+{
+
+	/*Enable RCC clock for GPIO access*/
+	RCC->AHB1ENR |= GPIOGCLK_EN;
+
+	/*Configure GPIOx as Output using the GPIO moder register */
+	GPIOG->MODER &= GPIO13_RESET;
+
+    /* Loop forever */
+	while(1)
+	{
+		/*Toggle LED attached to the P*/
+
+	}
+}

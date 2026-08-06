@@ -1,0 +1,14 @@
+/*
+ * health.c
+ *
+ *  Created on: Aug 6, 2026
+ *      Author: Agha Ikechukwu Kingsley
+ */
+
+
+/**
+ * @brief Emits the firmware identity line over the debug UART
+ *
+ * The output is a single CSV-like line designed for both humans and later automation:
+ * HEALTH, project=...,version=...,build_id=...,git_sha=...,config=...,timestamp=...
+ */

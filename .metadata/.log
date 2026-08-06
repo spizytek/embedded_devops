@@ -1,0 +1,29 @@
+!SESSION 2026-08-05 17:17:39.034 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/user/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/user/.eclipse_keyring -data /Users/user/Developer/embedded/stm32/CI_CD
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-08-05 17:17:48.994
+!MESSAGE Log4j2 initialized with config file /Users/user/Developer/embedded/stm32/CI_CD/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-08-05 17:17:54.435
+!MESSAGE Started RMI Server, listening on port 41338
+!SESSION 2026-08-05 17:25:41.592 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/user/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/user/.eclipse_keyring -data /Users/user/Developer/embedded/stm32/CI_CD
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-08-05 17:25:48.172
+!MESSAGE Log4j2 initialized with config file /Users/user/Developer/embedded/stm32/CI_CD/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-08-05 17:25:54.263
+!MESSAGE Started RMI Server, listening on port 41339
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-05 17:27:51.807
+!MESSAGE Indexed 'ci_cd_demo' (3 sources, 53 headers) in 0.991 sec: 1,954 declarations; 2,863 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
