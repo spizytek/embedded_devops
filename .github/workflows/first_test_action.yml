@@ -18,9 +18,10 @@ jobs:
           python-version: '3.12'
 
       - name: Print Hello message
-        run: echo "Hello, world! from Github Actions"
-        run: echo "Repository: ${{ github.repository }}"
-        run: echo "Branch: ${{ github.ref }}"
+        run: |
+          echo "Hello, world! from Github Actions"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
 
       - name: Show Python version
         run: python --version
