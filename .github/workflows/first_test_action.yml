@@ -36,3 +36,8 @@ jobs:
         with:
           name: hello-actions-outputs
           path: hello_outputs/output.txt
+
+      - name: Run Build script
+        run: |
+          echo "Running the build scripts..."
+          python scripts/build_firmware.py
