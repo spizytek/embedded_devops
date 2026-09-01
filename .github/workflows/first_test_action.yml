@@ -1,0 +1,38 @@
+name: First Test Action
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Python 
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Print Hello message
+        run: |
+          echo "Hello, world! from Github Actions"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Create a Simple artifact
+        run: |
+          mkdir hello_outputs
+          echo "Add other actions to build, test, and deploy your project." > hello_outputs/output.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: hello-actions-outputs
+          path: hello_outputs/output.txt

@@ -1,0 +1,21 @@
+# STM generated build folders
+**/Debug/
+**/Release/
+
+# Eclipse Workspace local metadata
+.metadata/
+
+#. Firmware build artifacts
+*.elf   
+*.bin
+*.o
+*.map
+*.d
+*.su
+*.hex
+*.cyclo
+*.list
+
+# Logs and temperary files from automated build tools
+*.log
+*.tmp
