@@ -97,6 +97,8 @@ def run_step(command: list[str], *, cwd: Path, log_handle)->None:
 
 
 
+
+
 def main() -> int:
     """Main function to build the firmware."""
 
@@ -185,6 +187,8 @@ def main() -> int:
 
     print(f"Build log saved to: {logs_path}")
     return 0
+
+
 
 
 if __name__ == "__main__":
