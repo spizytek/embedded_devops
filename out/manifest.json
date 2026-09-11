@@ -3,38 +3,38 @@
     {
       "file": "ci_cd_demo.elf",
       "relative_path": "ci_cd_demo/Release/ci_cd_demo.elf",
-      "sha256": "068da5ba4a91bc2bb5203bad53d0c3f7b825211b466865f0cbbf96ad2ff96366",
-      "size_bytes": 25084
+      "sha256": "f0f68fea5769b44e371cfc5374a3823e40d9f1c247ba70bf506b26ddff1665cf",
+      "size_bytes": 26208
     },
     {
       "file": "ci_cd_demo.map",
       "relative_path": "ci_cd_demo/Release/ci_cd_demo.map",
-      "sha256": "a98f043cc9e411f75884415cb6bdb40158cadcc97b5080e29d33e1e352765fa9",
-      "size_bytes": 132960
+      "sha256": "a3d756d7d2fccb77f43e4ebad7e49f3f804fb127efb881b8783a5b0e4b6b02ab",
+      "size_bytes": 137193
     },
     {
       "file": "ci_cd_demo.list",
       "relative_path": "ci_cd_demo/Release/ci_cd_demo.list",
-      "sha256": "f1234f67a4d9b09ce4bb22e5c748036d90500dc3702b62615fce9af29b28c6d3",
-      "size_bytes": 76019
+      "sha256": "168edd29e072af2ff7d21fbf10c488eb325914e680c605a233e5749cdb4c906f",
+      "size_bytes": 85064
     }
   ],
   "artifact_dir": "ci_cd_demo/Release",
   "build_config": "Release",
-  "build_id": "ci_cd_demo-Release-20260812194819Z-9e9ff1bbb139",
-  "build_timestamp_utc": "2026-08-12T19:48:19Z",
-  "generated_utc": "2026-08-12T19:48:27Z",
-  "git_sha": "9e9ff1bbb139",
+  "build_id": "ci_cd_demo-Release-20260911070207Z-ae02445e82b0",
+  "build_timestamp_utc": "2026-09-11T07:02:07Z",
+  "generated_utc": "2026-09-11T07:02:18Z",
+  "git_sha": "ae02445e82b0",
   "manifest_version": 1,
   "project": "ci_cd_demo",
   "uart_health_line": [
     "HEALTH",
     "project = ci_cd_demo",
     "version = 0.1.0",
-    "build_id = ci_cd_demo-Release-20260812194819Z-9e9ff1bbb139 ",
+    "build_id = ci_cd_demo-Release-20260911070207Z-ae02445e82b0 ",
     "config = Release",
-    "git_sha = 9e9ff1bbb139",
-    "timestamp = 2026-08-12T19:48:19Z"
+    "git_sha = ae02445e82b0",
+    "timestamp = 2026-09-11T07:02:07Z"
   ],
   "version": "0.1.0"
 }
