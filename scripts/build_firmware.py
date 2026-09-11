@@ -192,5 +192,5 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    print(find_stm32cubeide(None))
+    # print(find_stm32cubeide(None))
     raise SystemExit(main())
