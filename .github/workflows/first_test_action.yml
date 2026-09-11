@@ -7,7 +7,7 @@ on:
 
 jobs:
   hello:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # self-hosted 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -25,6 +25,18 @@ jobs:
 
       - name: Show Python version
         run: python --version
+
+      - name: Install ARM GNU Toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi
+
+      - name: Check ARM compiler
+        run: |
+          arm-none-eabi-gcc --version
+          arm-none-eabi-g++ --version
+          arm-none-eabi-objcopy --version
+          arm-none-eabi-size --version
 
       - name: Create a Simple artifact
         run: |
