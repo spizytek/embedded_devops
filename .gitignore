@@ -1,6 +1,6 @@
 # STM generated build folders
 **/Debug/
-**/Release/
+# **/Release/
 
 # Eclipse Workspace local metadata
 .metadata/
@@ -14,7 +14,6 @@
 *.su
 *.hex
 *.cyclo
-*.list
 
 # Logs and temperary files from automated build tools
 *.log
