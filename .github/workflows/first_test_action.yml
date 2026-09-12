@@ -71,4 +71,5 @@ jobs:
           curl --fail-with-body \
             -X POST \
             -F "firmware=@ci_cd_demo/CI_Release/build/ci_cd_demo.elf" \
+            -F "version=${{ github.run_number }}" \
             "https://postgresql-fasapi-backend-app.onrender.com/api/firmware"
