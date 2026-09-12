@@ -70,7 +70,7 @@ def append_log_line(handle, message:str) -> int:
     handle.flush()  # Ensure the message is written to the file immediately
 
 
-def run_step(command: list[str], *, cwd: Path, log_handle)->None:
+def run_step(command: list[str], *, cwd: Path, log_handle)->int:
     """Run a command and log it's output to the log file."""
     append_log_line(log_handle, f"$ {" ".join(command)}")
 
@@ -96,7 +96,37 @@ def run_step(command: list[str], *, cwd: Path, log_handle)->None:
     return result.returncode
 
 
+def run_step2(command: list[str], *, cwd: Path, log_handle) -> int:
+    """Run a command, print its output, and log it."""
 
+    command_str = " ".join(command)
+
+    print(f"$ {command_str}")
+    print(f"Working directory: {cwd}")
+
+    append_log_line(log_handle, f"$ {command_str}")
+    append_log_line(log_handle, f"Working directory: {cwd}")
+
+    result = subprocess.run(
+        command,
+        cwd=cwd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        check=False
+    )
+
+    # Print output to GitHub Actions console
+    print(result.stdout)
+
+    # Also save output to build.log
+    if result.stdout:
+        append_log_line(log_handle, result.stdout.rstrip())
+
+    append_log_line(log_handle, f"Return code: {result.returncode}")
+    append_log_line(log_handle, "-" * 100)
+
+    return result.returncode
 
 
 def main() -> int:
@@ -181,7 +211,7 @@ def main() -> int:
             ]
 
         print("runnning build command")
-        if run_step(build_command, cwd=root, log_handle=log_handle) != 0:
+        if run_step2(build_command, cwd=root, log_handle=log_handle) != 0:
             append_log_line(log_handle, "Firmware build failed.")
             return 1
 
