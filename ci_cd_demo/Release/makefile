@@ -59,8 +59,8 @@ all: main-build
 main-build: ci_cd_demo.elf secondary-outputs
 
 # Tool invocations
-ci_cd_demo.elf ci_cd_demo.map: $(OBJS) $(USER_OBJS) ../STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ci_cd_demo.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ci_cd_demo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ci_cd_demo.elf ci_cd_demo.map: $(OBJS) $(USER_OBJS) /Users/user/Developer/embedded/stm32/CI_CD/ci_cd_demo/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ci_cd_demo.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/user/Developer/embedded/stm32/CI_CD/ci_cd_demo/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ci_cd_demo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
