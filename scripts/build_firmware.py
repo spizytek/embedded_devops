@@ -155,7 +155,7 @@ def main() -> int:
             print("Git Action is building with GCC tool chain")
             cubeide = ""
             build_command = [
-                "/Library/Developer/CommandLineTools/usr/bin/make",
+                "make", #"/Library/Developer/CommandLineTools/usr/bin/make",
                 "-C",
                 str(project_dir / args.config),
                 "all"
