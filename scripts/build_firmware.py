@@ -150,24 +150,37 @@ def main() -> int:
             # Exit with a non-zero code to indicate failure, firmware build should not proceed if version generation fails
             return 1
 
-        # Find the STM32CubeIDE executable
-        try:
-            cubeide = find_stm32cubeide(args.cubeide)
-        except FileNotFoundError as e:
-            append_log_line(log_handle, str(e))
-            return 1
-         
-        build_command = [
-            str(cubeide),
-            "-nosplash",
-            "-application", 
-            "org.eclipse.cdt.managedbuilder.core.headlessbuild",
-            "-data", str(headless_workspace),  #The -data option tells Eclipse/CubeIDE: "Use this directory as your workspace.
-            "-import", str(project_dir),
-            "-cleanBuild", f"{args.project}/{args.config}",
-        ]
+        # check if githuub is the one building or a local machine:
+        if str(args.cubeide) == "no":
+            print("Git Action is building with GCC tool chain")
+            cubeide = ""
+            build_command = [
+                "/Library/Developer/CommandLineTools/usr/bin/make",
+                "-C",
+                str(project_dir / args.config),
+                "all"
+            ]
 
+        else:
+            # Find the STM32CubeIDE executable
+            try:
+                cubeide = find_stm32cubeide(args.cubeide)
 
+            except FileNotFoundError as e:
+                append_log_line(log_handle, str(e))
+                return 1
+            
+            build_command = [
+                str(cubeide),
+                "-nosplash",
+                "-application", 
+                "org.eclipse.cdt.managedbuilder.core.headlessbuild",
+                "-data", str(headless_workspace),  #The -data option tells Eclipse/CubeIDE: "Use this directory as your workspace.
+                "-import", str(project_dir),
+                "-cleanBuild", f"{args.project}/{args.config}",
+            ]
+
+        print("runnning build command")
         if run_step(build_command, cwd=root, log_handle=log_handle) != 0:
             append_log_line(log_handle, "Firmware build failed.")
             return 1
@@ -192,5 +205,5 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    # print(find_stm32cubeide(None))
+
     raise SystemExit(main())

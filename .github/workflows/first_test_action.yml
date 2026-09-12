@@ -52,4 +52,4 @@ jobs:
       - name: Run Build script
         run: |
           echo "Running the build scripts..."
-          python scripts/build_firmware.py
+          python3  ${{ github.workspace }}/scripts/build_firmware.py --cubeide no

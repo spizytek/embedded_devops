@@ -3,7 +3,7 @@
     {
       "file": "ci_cd_demo.elf",
       "relative_path": "ci_cd_demo/Release/ci_cd_demo.elf",
-      "sha256": "f0f68fea5769b44e371cfc5374a3823e40d9f1c247ba70bf506b26ddff1665cf",
+      "sha256": "96a3fa44d4538e2eb46296d8efa59d147b0786a8293ccf1c7d8025e0952b8899",
       "size_bytes": 26208
     },
     {
@@ -21,20 +21,20 @@
   ],
   "artifact_dir": "ci_cd_demo/Release",
   "build_config": "Release",
-  "build_id": "ci_cd_demo-Release-20260911070207Z-ae02445e82b0",
-  "build_timestamp_utc": "2026-09-11T07:02:07Z",
-  "generated_utc": "2026-09-11T07:02:18Z",
-  "git_sha": "ae02445e82b0",
+  "build_id": "ci_cd_demo-Release-20260912114832Z-bae2e6a6fcd3",
+  "build_timestamp_utc": "2026-09-12T11:48:32Z",
+  "generated_utc": "2026-09-12T11:48:32Z",
+  "git_sha": "bae2e6a6fcd3",
   "manifest_version": 1,
   "project": "ci_cd_demo",
   "uart_health_line": [
     "HEALTH",
     "project = ci_cd_demo",
     "version = 0.1.0",
-    "build_id = ci_cd_demo-Release-20260911070207Z-ae02445e82b0 ",
+    "build_id = ci_cd_demo-Release-20260912114832Z-bae2e6a6fcd3 ",
     "config = Release",
-    "git_sha = ae02445e82b0",
-    "timestamp = 2026-09-11T07:02:07Z"
+    "git_sha = bae2e6a6fcd3",
+    "timestamp = 2026-09-12T11:48:32Z"
   ],
   "version": "0.1.0"
 }

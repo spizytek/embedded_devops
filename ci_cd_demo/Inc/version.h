@@ -13,9 +13,9 @@
 #define EE_FW_PROJECT_NAME "ci_cd_demo"
 #define EE_FW_VERSION_STRING "0.1.0"
 #define EE_FW_BUILD_CONFIG "Release"
-#define EE_FW_BUILD_ID "ci_cd_demo-Release-20260911070207Z-ae02445e82b0"
-#define EE_FW_GIT_SHA "ae02445e82b0"
-#define EE_FW_BUILD_TIMESTAMP_UTC "2026-09-11T07:02:07Z"
+#define EE_FW_BUILD_ID "ci_cd_demo-Release-20260912114832Z-bae2e6a6fcd3"
+#define EE_FW_GIT_SHA "bae2e6a6fcd3"
+#define EE_FW_BUILD_TIMESTAMP_UTC "2026-09-12T11:48:32Z"
 
 
 #endif /* VERSION_H_ */
