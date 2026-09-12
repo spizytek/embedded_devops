@@ -33,6 +33,7 @@ jobs:
 
       - name: Check ARM compiler
         run: |
+          which make
           arm-none-eabi-gcc --version
           arm-none-eabi-g++ --version
           arm-none-eabi-objcopy --version
