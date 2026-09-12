@@ -103,3 +103,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/user/
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-11 09:02:31.387
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-12 16:23:45.092
+!MESSAGE Indexed 'ci_cd_demo' (9 sources, 71 headers) in 2.09 sec: 3,591 declarations; 6,034 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.021%)
