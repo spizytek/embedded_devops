@@ -65,3 +65,10 @@ jobs:
             ci_cd_demo/CI_Release/build/ci_cd_demo.map
             ci_cd_demo/CI_Release/build/ci_cd_demo.list
             out/logs/build.log
+
+      - name: Upload firmware to API
+        run: |
+          curl --fail-with-body \
+            -X POST \
+            -F "firmware=@ci_cd_demo/CI_Release/build/ci_cd_demo.elf" \
+            "https://postgresql-fasapi-backend-app.onrender.com/api/firmware"
