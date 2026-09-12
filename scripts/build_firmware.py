@@ -183,11 +183,12 @@ def main() -> int:
         # check if githuub is the one building or a local machine:
         if str(args.cubeide) == "no":
             print("Git Action is building with GCC tool chain")
-            cubeide = ""
+            
+            ci_dir_path = project_dir / "CI_Release"
             build_command = [
                 "make", #"/Library/Developer/CommandLineTools/usr/bin/make",
                 "-C",
-                str(project_dir / args.config),
+                str(ci_dir_path),
                 "all"
             ]
 
