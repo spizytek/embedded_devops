@@ -57,11 +57,11 @@ jobs:
       
       # We are bundling the built files together for later use
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ci-cd-demo-build-files
           path: |
-            ci_cd_demo/Release/ci_cd_demo.elf
-            ci_cd_demo/Release/ci_cd_demo.map
-            ci_cd_demo/Release/ci_cd_demo.list
+            ci_cd_demo/CI_Release/build/ci_cd_demo.elf
+            ci_cd_demo/CI_Release/build/ci_cd_demo.map
+            ci_cd_demo/CI_Release/build/ci_cd_demo.list
             out/logs/build.log
